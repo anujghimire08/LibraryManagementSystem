@@ -1,0 +1,100 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+    body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("assets/BG.jpg") ;
+            background-size: cover;
+            background-size: 100% 100%;
+        }
+
+    .container{
+            width: 350px;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            color: #fff;
+        }
+
+    .container h1{
+            padding: 0 0 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+    .container .input-box{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+    .input-box input{
+            width: 100%;
+            height: 100%;
+            padding: 20px 45px 20px 20px;
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+    .input-box input::placeholder{
+            color: #fff;
+        }
+
+    .terms{
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+    .terms a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+    .btn{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background: #fff;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    .btn:hover{
+        animation: up 0.3s linear forwards;
+    }
+    @keyframes up {
+        to{
+            transform: translateY(-5px);
+        }
+        
+    }
+
+    .login{
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+    .login a{
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+    } 
+    
+    .login a:hover{
+        color: black;
+    }
