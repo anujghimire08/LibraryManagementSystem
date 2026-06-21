@@ -1,19 +1,10 @@
-let nav_btns = document.querySelectorAll(".nav-items");
+const currentPage = window.location.pathname.split("/").pop();
 
-nav_btns.forEach((e,index)=>{
-    e.addEventListener("click",()=>navbg(index))
+document.querySelectorAll(".nav-items a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.parentElement.classList.add("nav-background");
+    }
 });
-
-function navbg(id){
-    nav_btns.forEach((e,index)=>{
-        if(id == index){
-            e.classList.add('nav-background');
-        }
-        else{
-            e.classList.remove('nav-background');
-        }
-    });
-}
 
 // notification icon
 let bell = document.getElementById("bell");
