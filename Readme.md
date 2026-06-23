@@ -22,15 +22,39 @@ The system is designed to digitize and simplify library operations such as manag
 
 ## 👨‍💻 Team Members
 
-<p align="center"> 
+<p align="center">
 
-<a href="https://github.com/Bibidh-Raj-Shrestha"> <img src="https://github.com/Bibidh-Raj-Shrestha.png" width="100" style="border-radius:50%"/> <br/> <b>Bibidh Raj Shrestha</b> <br/> <sub>Frontend / Backend / UI/UX</sub> </a>
+<a href="https://github.com/Bibidh-Raj-Shrestha">
+  <img src="https://github.com/Bibidh-Raj-Shrestha.png" width="100" style="border-radius:50%"/> <br/>
+  <b>Bibidh Raj Shrestha</b> <br/>
+  Frontend / Backend / UI/UX
+</a>
 
-    
+&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a href="https://github.com/anujghimire08"> <img src="https://github.com/anujghimire08.png" width="100" style="border-radius:50%"/> <br/> <b>Anuj Ghimire</b> <br/> <sub>Frontend / Backend / UI/UX</sub> </a> </p>
+<a href="https://github.com/anujghimire08">
+  <img src="https://github.com/anujghimire08.png" width="100" style="border-radius:50%"/> <br/>
+  <b>Anuj Ghimire</b> <br/>
+  Team Leader <br/>
+  Frontend / Backend / UI/UX
+</a>
 
-  
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://github.com/pragyanrajbhandari">
+  <img src="https://github.com/pragyanrajbhandari.png" width="100" style="border-radius:50%"/> <br/>
+  <b>Pragyan Rajbhandari</b> <br/>
+  Frontend / Backend / UI/UX
+</a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://github.com/nischalshrestha0011">
+  <img src="https://github.com/nischalshrestha0011.png" width="100" style="border-radius:50%"/> <br/>
+  <b>Nischal Shrestha</b> <br/>
+  Frontend / Backend / UI/UX
+</a>
+
 </p>
 
 ---
@@ -46,10 +70,10 @@ The system is designed to digitize and simplify library operations such as manag
 
 ## 🎓 Academic Context
 
-- **Project Name:** Library Management System  
-- **Type:** Team Project  
-- **Subject:** Web Development / Database Systems  
-- **Focus Areas:** CRUD operations, authentication, database design, UI/UX, system logic  
+- **Project Name:** Library Management System
+- **Type:** Team Project
+- **Subject:** Web Development / Database Systems
+- **Focus Areas:** CRUD operations, authentication, database design, UI/UX, system logic
 
 ---
 
@@ -99,10 +123,12 @@ The system is designed to digitize and simplify library operations such as manag
  ┣ 📜index.php
  ┗ 📜README.md
 ```
+
 ### 📌 Note
+
 This is a collaborative team project where all members contributed to planning, development, and testing of the Library Management System.
 
-----
+---
 
 <p align="center"> <b>⭐ If you like our project, don’t forget to star the repository!</b><br> <sub>Built with ❤️ by our development team</sub>
 
