@@ -22,40 +22,21 @@ The system is designed to digitize and simplify library operations such as manag
 
 ## 👨‍💻 Team Members
 
-<p align="center">
+<p align="center"> 
 
-<a href="https://github.com/Bibidh-Raj-Shrestha">
-  <img src="https://github.com/Bibidh-Raj-Shrestha.png" width="100" style="border-radius:50%"/> <br/>
-  <b>Bibidh Raj Shrestha</b> <br/>
-  Frontend / Backend / UI/UX
-</a>
+<a href="https://github.com/Bibidh-Raj-Shrestha"> <img src="https://github.com/Bibidh-Raj-Shrestha.png" width="100"/><br/> <b>Bibidh Raj Shrestha</b><br/> Frontend / Backend / UI/UX </a>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<br/><br/>
 
-<a href="https://github.com/anujghimire08">
-  <img src="https://github.com/anujghimire08.png" width="100" style="border-radius:50%"/> <br/>
-  <b>Anuj Ghimire</b> <br/>
-  Team Leader <br/>
-  Frontend / Backend / UI/UX
-</a>
+<a href="https://github.com/anujghimire08"> <img src="https://github.com/anujghimire08.png" width="100"/><br/> <b>Anuj Ghimire (Team Leader)</b><br/> Frontend / Backend / UI/UX </a>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<br/><br/>
 
-<a href="https://github.com/pragyanrajbhandari">
-  <img src="https://github.com/pragyanrajbhandari.png" width="100" style="border-radius:50%"/> <br/>
-  <b>Pragyan Rajbhandari</b> <br/>
-  Frontend / Backend / UI/UX
-</a>
+<a href="https://github.com/pragyanrajbhandari"> <img src="https://github.com/pragyanrajbhandari.png" width="100"/><br/> <b>Pragyan Rajbhandari</b><br/> Frontend / Backend / UI/UX </a>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<br/><br/>
 
-<a href="https://github.com/nischalshrestha0011">
-  <img src="https://github.com/nischalshrestha0011.png" width="100" style="border-radius:50%"/> <br/>
-  <b>Nischal Shrestha</b> <br/>
-  Frontend / Backend / UI/UX
-</a>
-
-</p>
+<a href="https://github.com/nischalshrestha0011"> <img src="https://github.com/nischalshrestha0011.png" width="100"/><br/> <b>Nischal Shrestha</b><br/> Frontend / Backend / UI/UX </a> </p>
 
 ---
 
