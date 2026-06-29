@@ -70,13 +70,13 @@ nav i{
     width:100%;
 }
 
-.logout a{
+.logout > a{
     text-align:center;
     text-decoration:none;
     color:black;
 }
 
-.logout a:hover{
+.logout > a:hover{
     text-decoration: underline;
 }
 
