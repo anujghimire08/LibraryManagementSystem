@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTER</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../css/register.css">
     
 
 </head>
@@ -41,7 +41,7 @@
 
                 <div class="login">
                     <p>Already have an account ?
-                    <a href="#">Login</a></p>
+                    <a href="login.php">Login</a></p>
                 </div>
             </form>
         </div>

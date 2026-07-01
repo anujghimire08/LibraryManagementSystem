@@ -6,13 +6,7 @@ document.querySelectorAll(".nav-items a").forEach(link => {
     }
 });
 
-// notification icon
-let bell = document.getElementById("bell");
-bell.addEventListener("mouseenter",()=>{
-    bell.classList.toggle("fa-regular");
-    bell.classList.toggle("fa-solid")
-});
-bell.addEventListener("mouseleave",()=>{
-    bell.classList.toggle("fa-regular");
-    bell.classList.toggle("fa-solid")
-});
+function goToPage() {
+    console.log("count");
+    window.location.href = "../../Auth/login.php";
+}   

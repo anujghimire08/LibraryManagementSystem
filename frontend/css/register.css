@@ -10,7 +10,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: url("assets/BG.jpg") ;
+            background: url("../../assets/registerbg.jpg") ;
             background-size: cover;
             background-size: 100% 100%;
         }
@@ -74,13 +74,8 @@
             cursor: pointer;
         }
     .btn:hover{
-        animation: up 0.3s linear forwards;
-    }
-    @keyframes up {
-        to{
-            transform: translateY(-5px);
-        }
-        
+        transform: translateY(-2ypx);
+        transition:all ease-in-out;
     }
 
     .login{

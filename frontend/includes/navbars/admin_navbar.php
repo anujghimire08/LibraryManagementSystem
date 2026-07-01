@@ -58,7 +58,7 @@
         </nav>
 
         <div class="logout">
-            <button>Logout</button>
+            <button onclick="goToPage()">Logout</button>
         </div>
 
     </aside>

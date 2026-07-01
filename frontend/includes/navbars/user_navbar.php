@@ -38,7 +38,7 @@
 
         <div class="logout">
             <a href="#">Help and Support</a>
-            <button>Logout</button>
+            <button onclick="goToPage()">Logout</button>
         </div>
 
     </aside>
