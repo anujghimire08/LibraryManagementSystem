@@ -60,9 +60,6 @@ nav li a:hover{
     border-radius: 50px;
     background-color: rgb(172, 171, 171);
 }
-nav i{
-    color:black;
-}
 .logout{
     display:flex;
     flex-direction:column;

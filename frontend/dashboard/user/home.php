@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
-    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-    <?php include_once("../../includes/navbars/admin_navbar.php"); ?>
+    <?php include_once("../../includes/navbars/user_navbar.php"); ?>
 
     <main>
         <div class="head">
-            <h1>ADMIN DASHBOARD</h1>
+            <h1>USER DASHBOARD</h1>
             <div class="pfp-details">
                 <div class="pfp">B</div>
             </div>
@@ -23,9 +23,6 @@
             <div class="dash-items"> 
                 <span class="dash-contents-head">
                     books
-                </span>
-                <span>
-                    asdf
                 </span>
             </div>
             <div class="dash-items">
@@ -45,6 +42,6 @@
             </div>
         </div>
     </main>
-    <script src="../../script/admin.js"></script>
+    <script src="../../script/user.js"></script>
 </body>
 </html>

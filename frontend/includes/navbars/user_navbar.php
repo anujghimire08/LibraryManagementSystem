@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-
-    <link rel="stylesheet" href="/frontend/css/user.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
-
-<body>
-    <aside>
+<aside>
 
         <div class="top">
             <img src="https://cdn-icons-png.flaticon.com/512/8832/8832880.png" id="logo">
@@ -19,28 +7,28 @@
         <nav>
             <ul>
                 <li class="nav-items">
-                    <a href="home.html">
+                    <a href="home.php">
                         <i class="fa-solid fa-house"></i>
                         <span>Home</span>
                     </a>
                 </li>
 
                 <li class="nav-items">
-                    <a href="borrowed.html">
+                    <a href="borrowed.php">
                         <i class="fa-regular fa-bookmark"></i>
                         <span>Borrowed</span>
                     </a>
                 </li>
 
                 <li class="nav-items">
-                    <a href="books.html">
+                    <a href="books.php">
                         <i class="fa-solid fa-book"></i>
                         <span>Books</span>
                     </a>
                 </li>
 
                 <li class="nav-items">
-                    <a href="review.html">
+                    <a href="review.php">
                         <i class="fa-regular fa-star"></i>
                         <span>Review</span>
                     </a>
@@ -54,17 +42,3 @@
         </div>
 
     </aside>
-
-    <main>
-        <div class="head">
-            <h1>USER DASHBOARD</h1>
-            <div class="pfp-details">
-                <i class="fa-regular fa-bell" id="bell"></i>
-                <div class="pfp">B</div>
-            </div>
-        </div> 
-        
-    </main>
-    <script src="/frontend/script/user.js"></script>
-</body>
-</html>

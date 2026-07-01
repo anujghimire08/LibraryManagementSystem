@@ -10,16 +10,15 @@
 </head>
 
 <body>
-    <?php include_once("../../includes/admin_navbar.php"); ?>
+    <?php include_once("../../includes/navbars/admin_navbar.php"); ?>
 
     <main>
         <div class="head">
             <h1>ADMIN DASHBOARD</h1>
             <div class="pfp-details">
-                <i class="fa-regular fa-bell" id="bell"></i>
                 <div class="pfp">B</div>
             </div>
-        </div> 
+        <!-- </div> 
         <div class="dash-contents">
             <div class="dash-items"> 
                 <span class="dash-contents-head">
@@ -41,8 +40,8 @@
                     returned
                 </span>
             </div>
-        </div>
+        </div> -->
     </main>
-    <script src="/frontend/script/admin.js"></script>
+    <script src="../../script/admin.js"></script>
 </body>
 </html>
