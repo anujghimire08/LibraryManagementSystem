@@ -28,7 +28,7 @@
         <li><a href="">FAQS</a></li>
       </nav>
       <section id="auth-section">
-        <button>Login</button>
+        <button onclick="navigate()">Login</button>
       </section>
     </header>
     <section id="hero-section">
@@ -384,6 +384,9 @@
         }, 1000);
       }
       blink();
+      function navigate(){
+        window.location.href="./frontend/Auth/login.php";
+      }
     </script>
   </body>
 </html>

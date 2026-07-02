@@ -25,28 +25,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         mysqli_stmt_execute($stmt);
 
         $result = mysqli_stmt_get_result($stmt);
-
-        if ($row = mysqli_fetch_assoc($result)) {
-
-            if ($password == $row["password"]) {
-
+        if($row = mysqli_fetch_assoc($result)){
+            if($password == $row["password"]){
                 $_SESSION["user"] = $row["name"];
                 $_SESSION["role"] = $row["role"];
-
                 mysqli_stmt_close($stmt);
-
                 if ($row["role"] === "admin") {
                     header("Location: ../dashboard/admin/home.php");
                 } else {
                     header("Location: ../dashboard/user/home.php");
                 }
-
                 exit();
-            } else {
+            } 
+            else{
                 $error = "Invalid email or password.";
             }
 
-        } else {
+        } 
+        else{
             $error = "Invalid email or password.";
         }
 
