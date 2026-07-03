@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
+        header("location: ../../Auth/logout.php");
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

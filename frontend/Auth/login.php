@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $result = mysqli_stmt_get_result($stmt);
         if($row = mysqli_fetch_assoc($result)){
-            if($password == $row["password"]){
+            if(password_verify($password,$row['password'])){
                 $_SESSION["user"] = $row["name"];
                 $_SESSION["role"] = $row["role"];
                 mysqli_stmt_close($stmt);

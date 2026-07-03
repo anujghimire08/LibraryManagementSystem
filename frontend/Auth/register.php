@@ -3,13 +3,20 @@
     require_once("../includes/db.php");
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $name = filter_input(INPUT_POST,"name",FILTER_SANITIZE_SPECIAL_CHARS);
-        $email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL);
+        $name = filter_input(INPUT_POST,"username",FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST,"email",FILTER_VALIDATE_EMAIL);
         $password = trim($_POST["password"]);
         $co_password = trim($_POST["co-password"]);
 
-        if(!empty($name) && $email != false && $password != "" && $co_password != "" ){
-            
+        if(!empty($name) && $email != false && $password != "" && $co_password != "" && $password == $co_password ){
+            $hash = password_hash($password,PASSWORD_DEFAULT);
+            $stmt = mysqli_prepare($conn,
+            "INSERT INTO users (name,email,password,role)
+                VALUES (?,?,?,?)
+            ");
+            $role ="user";
+            mysqli_stmt_bind_param($stmt,"ssss",$name,$email,$hash,$role);
+            mysqli_stmt_execute($stmt);
         }
     }
 

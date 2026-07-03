@@ -8,5 +8,5 @@ document.querySelectorAll(".nav-items a").forEach(link => {
 
 
 function goToPage() {
-    window.location.href = "../../Auth/login.php";
+    window.location.href = "../../Auth/logout.php";
 }
