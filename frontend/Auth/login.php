@@ -28,7 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if($row = mysqli_fetch_assoc($result)){
             if(password_verify($password,$row['password'])){
                 $_SESSION["user"] = $row["name"];
+                $_SESSION["email"] = $row["email"];
                 $_SESSION["role"] = $row["role"];
+                $_SESSION["status"] = "confirmed";
                 mysqli_stmt_close($stmt);
                 if ($row["role"] === "admin") {
                     header("Location: ../dashboard/admin/home.php");

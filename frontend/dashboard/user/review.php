@@ -17,7 +17,12 @@
 </head>
 
 <body>
-    <?php include_once("../../includes/navbars/user_navbar.php"); ?>
+    <?php 
+        if($_SESSION["status"] == "pending"){
+            include("status.php");
+        }
+        include_once("../../includes/navbars/user_navbar.php"); 
+    ?>
 
     <main>
         <div class="head">
