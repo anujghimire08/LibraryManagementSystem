@@ -55,7 +55,8 @@
         .dash-items-txt{
             display:flex;
             flex-direction:column;
-            align-items:flex-end;
+            align-items:center;
+            justify-content:center;
             gap:8px;
         }
 
@@ -76,7 +77,7 @@
 
 <body>
     <?php 
-        if($_SESSION["status"] == "pending"){
+        if($_SESSION["status"]!== 1){
             include("status.php");
         }
         include_once("../../includes/navbars/user_navbar.php"); 
@@ -84,7 +85,7 @@
 
     <main>
         <div class="head">
-            <h1>USER DASHBOARD</h1>
+            <h1>User Dashboard</h1>
             <div class="pfp-details">
                 <div class="pfp"><?= strtoupper($_SESSION["user"][0]) ?></div>
             </div>

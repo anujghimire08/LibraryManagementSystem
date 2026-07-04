@@ -34,19 +34,6 @@
                     </a>
                 </li>
 
-                <li class="nav-items">
-                    <a href="issued.php">
-                        <i class="fa-solid fa-book-open-reader"></i>
-                        <span>Issued</span>
-                    </a>
-                </li>
-
-                <li class="nav-items">
-                    <a href="returns.php">
-                        <i class="fa-solid fa-arrow-rotate-left"></i>
-                        <span>Returns</span>
-                    </a>
-                </li>
 
                 <li class="nav-items">
                     <a href="reviews.php">

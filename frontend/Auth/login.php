@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($email !== false && $password !== "") {
 
         $stmt = mysqli_prepare($conn,
-            "SELECT name, email, password, role
+            "SELECT *
             FROM users
             WHERE email = ?"
         );
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_SESSION["user"] = $row["name"];
                 $_SESSION["email"] = $row["email"];
                 $_SESSION["role"] = $row["role"];
-                $_SESSION["status"] = "confirmed";
+                $_SESSION["status"] = $row["isApproval"];
                 mysqli_stmt_close($stmt);
                 if ($row["role"] === "admin") {
                     header("Location: ../dashboard/admin/home.php");
