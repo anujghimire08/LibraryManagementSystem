@@ -32,9 +32,6 @@
                 <span class="dash-contents-head">
                     books
                 </span>
-                <span>
-                    asdf
-                </span>
             </div>
             <div class="dash-items">
                 <span class="dash-contents-head">

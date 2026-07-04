@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="register-link">
                 <p>Don't have an account?<a href="register.php"> Register</a></p>
             </div>
-            <?= htmlspecialchars($error) ?>
+            <em style="display:block;text-align:center"><?= htmlspecialchars($error) ?></em>
         </form>
     </div>
 </body>

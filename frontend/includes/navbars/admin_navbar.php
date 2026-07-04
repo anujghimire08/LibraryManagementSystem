@@ -1,7 +1,7 @@
 <aside>
 
         <div class="top">
-            <img src="https://cdn-icons-png.flaticon.com/512/8832/8832880.png" id="logo">
+            <img src="../../../assets/logo.png" id="logo">
         </div>
 
         <nav>
