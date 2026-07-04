@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once("../../includes/db.php");
     if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
         header("location: ../../Auth/logout.php");
         exit();
@@ -48,6 +49,38 @@
                 </span>
             </div>
         </div> -->
+        <table rules="all">
+            <thead>
+                <tr>
+                    <th>S.N</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Joined On</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                $stmt = mysqli_prepare($conn, "SELECT * FROM users");
+                mysqli_stmt_execute($stmt);
+                    
+                $result = mysqli_stmt_get_result($stmt);
+                    
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>";
+                    echo "<td>{$row['id']}</td>";
+                    echo "<td>{$row['name']}</td>";
+                    echo "<td>{$row['email']}</td>";
+                    echo "<td>{$row['role']}</td>";
+                    echo "<td>{$row['created_at']}</td>";
+                    echo "</tr>";
+                }
+                mysqli_stmt_close($stmt);
+                ?>
+            </tbody>
+
+        </table>
     </main>
     <script src="../../script/admin.js"></script>
 </body>
