@@ -19,7 +19,6 @@
 <body>
     <?php include_once("../../includes/navbars/admin_navbar.php"); ?>
 
-
     <main>
         <div class="head">
             <h1>ADMIN DASHBOARD</h1>
@@ -27,28 +26,142 @@
                 <div class="pfp">B</div>
             </div>
         </div> 
-        <!-- <div class="dash-contents">
-            <div class="dash-items"> 
-                <span class="dash-contents-head">
-                    books
-                </span>
+
+
+    <section id="approval-users">
+
+        <div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
             </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    Borrowed
-                </span>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div>
+
+
+        <div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
             </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    to review
-                </span>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div>
+
+        <div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
             </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    returned
-                </span>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div>
+
+        <div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
             </div>
-        </div> -->
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div>
+
+        <div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div>
+
+        <div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div><div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div><div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div><div class="feedback-card">
+          <div class="user-info">
+            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <div>
+              <h3>John Carter</h3>
+              <p>Student</p>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="feedback-text">
+            The library system helped me access books quickly and improved my
+            study routine.
+          </p>
+        </div>
+
+    </section>
+    
     </main>
     <script src="../../script/admin.js"></script>
 </body>

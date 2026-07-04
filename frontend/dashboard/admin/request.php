@@ -19,6 +19,7 @@
 <body>
     <?php include_once("../../includes/navbars/admin_navbar.php"); ?>
 
+
     <main>
         <div class="head">
             <h1>ADMIN DASHBOARD</h1>
