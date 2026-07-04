@@ -21,7 +21,7 @@
 
     <main>
         <div class="head">
-            <h1>ADMIN DASHBOARD</h1>
+            <h1> DASHBOARD</h1>
             <div class="pfp-details">
                 <div class="pfp">B</div>
             </div>
@@ -48,7 +48,29 @@
                 </span>
             </div>
         </div> -->
+        <table id="usersList" rules="all" >
+            <caption>LMS User's List</caption>
+            <thead>
+                <tr>
+                    <th>S.N</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Joined On</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            <?php
+
+            $stmt = mysqli_
+            
+            ?>
+            
+                
+            </tbody>
+        </table>
     </main>
-    <script src="../../script/admin.js"></script>
+<script src="../../script/admin.js"></script>
 </body>
 </html>
