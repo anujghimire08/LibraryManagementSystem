@@ -1,59 +1,60 @@
 <?php
-session_start();
-require_once "../includes/db.php";
+    session_start();
+    require_once "../includes/db.php";
 
-$error = "";
+    $error = "";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
-    $password = trim($_POST["password"]);
+        $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+        $password = trim($_POST["password"]);
 
-    if ($email !== false && $password !== "") {
+        if ($email !== false && $password !== "") {
 
-        $stmt = mysqli_prepare($conn,
-            "SELECT *
-            FROM users
-            WHERE email = ?"
-        );
+            $stmt = mysqli_prepare($conn,
+                "SELECT *
+                FROM users
+                WHERE email = ?"
+            );
 
-        if (!$stmt) {
-            die(mysqli_error($conn));
-        }
+            if (!$stmt) {
+                die(mysqli_error($conn));
+            }
 
-        mysqli_stmt_bind_param($stmt, "s", $email);
-        mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_param($stmt, "s", $email);
+            mysqli_stmt_execute($stmt);
 
-        $result = mysqli_stmt_get_result($stmt);
-        if($row = mysqli_fetch_assoc($result)){
-            if(password_verify($password,$row['password'])){
-                $_SESSION["user"] = $row["name"];
-                $_SESSION["email"] = $row["email"];
-                $_SESSION["role"] = $row["role"];
-                $_SESSION["status"] = $row["isApproval"];
-                mysqli_stmt_close($stmt);
-                if ($row["role"] === "admin") {
-                    header("Location: ../dashboard/admin/home.php");
-                } else {
-                    header("Location: ../dashboard/user/home.php");
+            $result = mysqli_stmt_get_result($stmt);
+            if($row = mysqli_fetch_assoc($result)){
+                if(password_verify($password,$row['password'])){
+                    $_SESSION["id"] = $row["id"];
+                    $_SESSION["user"] = $row["name"];
+                    $_SESSION["email"] = $row["email"];
+                    $_SESSION["role"] = $row["role"];
+                    $_SESSION["status"] = $row["isApproval"];
+                    mysqli_stmt_close($stmt);
+                    if ($row["role"] === "admin") {
+                        header("Location: ../dashboard/admin/home.php");
+                    } else {
+                        header("Location: ../dashboard/user/home.php");
+                    }
+                    exit();
+                } 
+                else{
+                    $error = "Invalid email or password.";
                 }
-                exit();
+
             } 
             else{
                 $error = "Invalid email or password.";
             }
 
-        } 
-        else{
-            $error = "Invalid email or password.";
+            mysqli_stmt_close($stmt);
+
+        } else {
+            $error = "Please enter a valid email and password.";
         }
-
-        mysqli_stmt_close($stmt);
-
-    } else {
-        $error = "Please enter a valid email and password.";
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
