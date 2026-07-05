@@ -221,3 +221,30 @@ td {
 .feedback-card .feedback-text {
   margin-top: 10px;
 }
+
+/* admin-approval-action */
+
+.admin-approval-action {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.admin-approval-action button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+.admin-approval-action button:active {
+  transform: scale(0.98);
+}
+
+.admin-approval-action #accept {
+  background-color: green;
+}
+
+.admin-approval-action #reject {
+  background-color: red;
+}

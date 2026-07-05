@@ -1,9 +1,22 @@
 <?php
     session_start();
+    require_once("../../includes/db.php");
     if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
         header("location: ../../Auth/logout.php");
         exit();
     }
+    if($_SERVER["REQUEST_METHOD"]==="POST"){
+        $usermail = $_POST['email'];
+        if(isset($_POST['accept'])){
+            $stmt= mysqli_prepare($conn, "UPDATE users SET isApproval = 1 WHERE email = ? AND isApproval = 0 ");
+            mysqli_stmt_bind_param($stmt, "s", $usermail);
+            mysqli_execute($stmt);
+        }else{
+            echo "reject";
+        }
+
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,29 +39,46 @@
             <div class="pfp-details">
                 <div class="pfp">B</div>
             </div>
-        </div> 
-        <!-- <div class="dash-contents">
-            <div class="dash-items"> 
-                <span class="dash-contents-head">
-                    books
-                </span>
-            </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    Borrowed
-                </span>
-            </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    to review
-                </span>
-            </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    returned
-                </span>
-            </div>
-        </div> -->
+        </div>
+        
+    <section id="approval-users">
+
+        <?php
+
+        $stmt= mysqli_prepare($conn, "SELECT * FROM users WHERE isApproval= 0");
+
+        mysqli_execute($stmt);
+
+        $result = mysqli_stmt_get_result($stmt);
+
+            while($row = mysqli_fetch_assoc($result)){
+            
+                echo "<div class='feedback-card'>
+                        <div class='user-info'>
+                            <img src='../../../assets/defaultprofile.jpg' alt='user' />
+                            <div>
+                             <h3>{$row['name']}</h3>
+                             <p>{$row['email']}</p>
+                            </div>
+                        </div>
+                        <div class='admin-approval-action'>
+                            <form method='post'>
+                                <input type='text' name='email' value='{$row['email']}' hidden/>
+                                <button name='accept' id='accept'>Accept User</button>
+                                <button name='reject' id='reject'>Reject User</button>
+                            </form>
+                        </div>
+                    </div>";
+            }
+        ?>
+
+
+     
+
+        
+
+    </section>
+       
     </main>
     <script src="../../script/admin.js"></script>
 </body>
