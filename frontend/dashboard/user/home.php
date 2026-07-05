@@ -1,9 +1,30 @@
 <?php
     session_start();
+    include("../../includes/db.php");
     if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
         header("location: ../../Auth/logout.php");
         exit();
     }
+
+    $user_id = $_SESSION["id"];
+    $countStmt = mysqli_prepare($conn,
+        "SELECT COUNT(*) AS total
+        FROM BorrowRecords
+        WHERE user_id = ?"
+    );
+
+    mysqli_stmt_bind_param($countStmt, "i", $user_id);
+    mysqli_stmt_execute($countStmt);
+
+    $countResult = mysqli_stmt_get_result($countStmt);
+    $totalRecords = mysqli_fetch_assoc($countResult)["total"];
+
+
+    $countQuery = "SELECT COUNT(*) AS total FROM Books";
+    $countResult = mysqli_query($conn, $countQuery);
+    $countRow = mysqli_fetch_assoc($countResult);
+
+    $totalBooks = $countRow["total"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +121,7 @@
                         Books
                     </span>
                     <span class="dash-item-val">
-                        5
+                        <?= $totalBooks ?>
                     </span>
                 </div>                
             </div>
@@ -113,7 +134,7 @@
                         Borrowed
                     </span>
                     <span class="dash-item-val">
-                        5
+                        <?= $totalRecords ?>
                     </span>
                 </div>  
             </div>
