@@ -75,34 +75,53 @@ The system is designed to digitize and simplify library operations such as manag
 ```text
 📦 LibraryManagementSystem
  ┣ 📂assets
- ┃ ┣ 📂images
- ┃ ┣ 📂icons
- ┃
- ┣ 📂database
- ┃ ┣ 📜library.sql
- ┃ ┗ 📜schema.sql
- ┃
- ┣ 📂modules
- ┃ ┣ 📂auth
- ┃ ┣ 📂books
- ┃ ┣ 📂members
- ┃ ┗ 📂transactions
- ┃
+ ┃ ┣ 📜defaultprofile.jpg
+ ┃ ┣ 📜growth.png
+ ┃ ┣ 📜headerbg.jpg
+ ┃ ┣ 📜left.png
+ ┃ ┣ 📜loginbg.jpeg
+ ┃ ┣ 📜logo.png
+ ┃ ┣ 📜manage.png
+ ┃ ┣ 📜milestonevideo.mp4
+ ┃ ┣ 📜registerbg.jpg
+ ┃ ┗ 📜right.png
+ ┣ 📂Documentation
+ ┃ ┗ 📜x.excalidraw
  ┣ 📂frontend
- ┃ ┣ 📜index.html
- ┃ ┣ 📜dashboard.html
- ┃ ┗ 📜style.css
- ┃
- ┣ 📂scripts
- ┃ ┣ 📜app.js
- ┃ ┣ 📜auth.js
- ┃ ┗ 📜validation.js
- ┃
- ┣ 📂config
- ┃ ┗ 📜db.php
- ┃
- ┣ 📜index.php
- ┗ 📜README.md
+ ┃ ┣ 📂Auth
+ ┃ ┃ ┣ 📜login.php
+ ┃ ┃ ┣ 📜logout.php
+ ┃ ┃ ┗ 📜register.php
+ ┃ ┣ 📂css
+ ┃ ┃ ┣ 📜admin.css
+ ┃ ┃ ┣ 📜index.css
+ ┃ ┃ ┣ 📜login.css
+ ┃ ┃ ┣ 📜register.css
+ ┃ ┃ ┗ 📜user.css
+ ┃ ┣ 📂dashboard
+ ┃ ┃ ┣ 📂admin
+ ┃ ┃ ┃ ┣ 📜books.php
+ ┃ ┃ ┃ ┣ 📜borrow.php
+ ┃ ┃ ┃ ┣ 📜home.php
+ ┃ ┃ ┃ ┣ 📜request.php
+ ┃ ┃ ┃ ┣ 📜reviews.php
+ ┃ ┃ ┃ ┗ 📜users.php
+ ┃ ┃ ┗ 📂user
+ ┃ ┃ ┃ ┣ 📜books.php
+ ┃ ┃ ┃ ┣ 📜borrowed.php
+ ┃ ┃ ┃ ┣ 📜home.php
+ ┃ ┃ ┃ ┣ 📜review.php
+ ┃ ┃ ┃ ┗ 📜status.php
+ ┃ ┣ 📂includes
+ ┃ ┃ ┣ 📂navbars
+ ┃ ┃ ┃ ┣ 📜admin_navbar.php
+ ┃ ┃ ┃ ┗ 📜user_navbar.php
+ ┃ ┃ ┗ 📜db.php
+ ┃ ┗ 📂script
+ ┃ ┃ ┣ 📜admin.js
+ ┃ ┃ ┗ 📜user.js
+ ┣ 📜index.html
+ ┗ 📜Readme.md
 ```
 
 ### 📌 Note
