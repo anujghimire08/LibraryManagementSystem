@@ -1,0 +1,116 @@
+<?php
+    session_start();
+    require_once("../../includes/db.php");
+    if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
+        header("location: ../../Auth/logout.php");
+        exit();
+    }
+    
+    // accessing user name for select elements
+    $stmt = mysqli_prepare($conn, "SELECT email FROM users WHERE role='user'");
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+
+    // accessing book name for select elements
+    $stmt = mysqli_prepare($conn, "SELECT name FROM books");
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    $books = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+
+    // user ko books borrowed's ko data storing back to database 
+    if($_SERVER['REQUEST_METHOD']==="POST"){
+        if(isset($_POST['borrowed'])){
+
+        if($_POST['email']=== "" || $_POST['bookname']=== ""){
+            return;
+        }
+
+         $useremail = $_POST['email'];
+         $bookname = $_POST['bookname'];
+
+
+        $stmt = mysqli_prepare($conn, "SELECT id FROM users WHERE email = ? ");
+        mysqli_stmt_bind_param($stmt,'s',$useremail );
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        $userid = mysqli_fetch_assoc($result)['id'];
+
+
+        $stmt2 = mysqli_prepare($conn, "SELECT id FROM books WHERE name = ? ");
+        mysqli_stmt_bind_param($stmt2,'s',$bookname );
+        mysqli_stmt_execute($stmt2);
+        $result = mysqli_stmt_get_result($stmt2);
+        $bookid = mysqli_fetch_assoc($result)['id'];
+
+
+         $stmtborrow = mysqli_prepare($conn, "INSERT INTO borrowrecords (user_id, book_id)  VALUES (?,?)");
+         mysqli_stmt_bind_param($stmtborrow, "ii", $userid, $bookid);
+         mysqli_stmt_execute($stmtborrow);
+        }
+    }
+        
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+
+<body>
+    <?php include_once("../../includes/navbars/admin_navbar.php"); ?>
+
+
+    <main>
+        <div class="head">
+            <h1>ADMIN DASHBOARD</h1>
+            <div class="pfp-details">
+                <div class="pfp">B</div>
+            </div>
+        </div>
+
+
+        <form method="POST">
+
+        <input list='emails' name='email' id='email'>
+        <datalist id='emails'>
+
+            <?php 
+                    foreach($users as $user){
+                    echo "<option value='{$user['email']}'/>";
+                    }
+            ?> 
+
+        </datalist>
+
+            <select id="books" name='bookname'>
+                <option value="" selected disabled>Select Book</option>
+
+                <?php 
+                        foreach($books as $book){
+                        echo "<option value='{$book['name']}'>{$book['name']}</option>";
+                        }
+                ?>
+          </select>
+
+          <button type='submit' name='borrowed'>Borrowed</button>
+
+        </form>
+        
+       
+    </main>
+    <script src="../../script/admin.js"></script>
+</body>
+</html>

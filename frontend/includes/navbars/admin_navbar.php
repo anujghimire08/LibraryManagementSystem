@@ -21,6 +21,13 @@
                 </li>
 
                 <li class="nav-items">
+                    <a href="borrow.php">
+                        <i class="fa-regular fa-bookmark"></i>
+                        <span>Borrow</span>
+                    </a>
+                </li>
+
+                <li class="nav-items">
                     <a href="users.php">
                         <i class="fa-regular fa-user"></i>
                         <span>Users</span>
