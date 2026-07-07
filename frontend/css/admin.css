@@ -248,3 +248,32 @@ td {
 .admin-approval-action #reject {
   background-color: red;
 }
+
+#borrowing-container {
+  width: 80%;
+  background-color: #6b9aeb3c;
+  border: 1px solid #e0e0e0;
+  padding: 40px 20px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 20px;
+}
+strong {
+  position: absolute;
+  top: 5px;
+}
+#borrowing-details {
+  display: flex;
+  justify-content: space-around;
+}
+.steps {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.steps i {
+  font-size: 26px;
+  color: #6b9aeb;
+}

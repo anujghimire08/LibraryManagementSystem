@@ -53,7 +53,6 @@
          mysqli_stmt_execute($stmtborrow);
         }
     }
-        
 
 ?>
 
@@ -66,6 +65,7 @@
 
     <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 
 
@@ -109,7 +109,7 @@
 
         </form>
         
-       
+        <?php include_once("../../includes/borrow_guidelines.php")?>
     </main>
     <script src="../../script/admin.js"></script>
 </body>
