@@ -155,6 +155,7 @@ session_start();
                 <div class="pfp">B</div>
             </div>
         </div>
+        
         <div class="borrow-head">
             <div class="borrow-head-title">
                 <h2>Borrowed Books</h2>
@@ -174,6 +175,7 @@ session_start();
                 </div>
             </div>
         </div>
+
         <table rules="all">
             <thead>
                 <tr>

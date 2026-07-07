@@ -6,6 +6,8 @@
         exit();
     }
 
+
+    //total borrow records 
     $user_id = $_SESSION["id"];
     $countStmt = mysqli_prepare($conn,
         "SELECT COUNT(*) AS total
@@ -20,11 +22,22 @@
     $totalRecords = mysqli_fetch_assoc($countResult)["total"];
 
 
+    //total books count
     $countQuery = "SELECT COUNT(*) AS total FROM Books";
     $countResult = mysqli_query($conn, $countQuery);
     $countRow = mysqli_fetch_assoc($countResult);
 
     $totalBooks = $countRow["total"];
+
+    //total reviews
+    $countReview = mysqli_prepare($conn,"SELECT COUNT(*) AS total FROM reviews
+                    WHERE email = ?");
+    mysqli_stmt_bind_param($countReview,"s",$_SESSION["email"]);
+    mysqli_stmt_execute($countReview);
+
+    $reviewResult = mysqli_stmt_get_result($countReview);
+    $totalReview = mysqli_fetch_assoc($reviewResult)["total"];
+                    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,7 +160,7 @@
                         Review
                     </span>
                     <span class="dash-item-val">
-                        5
+                        <?= $totalReview?>
                     </span>
                 </div>  
             </div>

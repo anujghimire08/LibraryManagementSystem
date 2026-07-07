@@ -77,9 +77,6 @@
 
 <body>
     <?php 
-        if($_SESSION["status"]!== 1){
-            include("status.php");
-        }
         include_once("../../includes/navbars/admin_navbar.php"); 
     ?>
 

@@ -57,8 +57,8 @@
                         <div class='user-info'>
                             <img src='../../../assets/defaultprofile.jpg' alt='user' />
                             <div>
-                             <h3>{$row['name']}</h3>
-                             <p>{$row['email']}</p>
+                                <h3>{$row['name']}</h3>
+                                <p>{$row['email']}</p>
                             </div>
                         </div>
                         <div class='admin-approval-action'>
@@ -70,15 +70,8 @@
                         </div>
                     </div>";
             }
-        ?>
-
-
-     
-
-        
-
+        ?>      
     </section>
-       
     </main>
     <script src="../../script/admin.js"></script>
 </body>
