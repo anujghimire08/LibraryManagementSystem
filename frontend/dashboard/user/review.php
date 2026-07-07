@@ -41,7 +41,7 @@
 
             padding:10px;
 
-            border: 1px solid black;
+            border: 1px solid rgb(176, 174, 174);
             border-radius:10px;
         }
         input{
@@ -54,9 +54,20 @@
             height: 100px;
             resize: none;
         }
+        input,textarea{
+            font-size: medium;
+            padding: 5px;
+            border-radius: 5px;
+        }
         .submit{
             font-size: large;
             background-color: #6b9aeb;
+            border-radius: 5px;
+            border:1px solid black;
+        }
+        .submit:hover{
+            background-color: #5b93f3;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -73,7 +84,7 @@
         <div class="head">
             <h1>USER DASHBOARD</h1>
             <div class="pfp-details">
-                <div class="pfp">B</div>
+                <div class="pfp"><?= strtoupper($_SESSION["user"][0]) ?></div>
             </div>
         </div> 
         

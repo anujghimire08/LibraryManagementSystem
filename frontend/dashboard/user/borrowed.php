@@ -152,7 +152,7 @@ session_start();
         <div class="head">
             <h1>USER DASHBOARD</h1>
             <div class="pfp-details">
-                <div class="pfp">B</div>
+                <div class="pfp"><?= strtoupper($_SESSION["user"][0]) ?></div>
             </div>
         </div>
         
