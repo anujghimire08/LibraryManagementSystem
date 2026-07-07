@@ -228,7 +228,10 @@ session_start();
         }
         ?>
 
-        </div>      
+        </div>     
+
+        <?php include_once("../../includes/borrow_guidelines.php")?>
+
     </main>
     <script src="../../script/user.js"></script>
 </body>

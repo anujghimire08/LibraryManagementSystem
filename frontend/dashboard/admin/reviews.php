@@ -1,9 +1,18 @@
 <?php
     session_start();
+    require_once("../../includes/db.php");
     if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
         header("location: ../../Auth/logout.php");
         exit();
     }
+
+    $stmt = mysqli_prepare($conn, "SELECT * FROM reviews");
+
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    $reviews = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,135 +39,27 @@
 
     <section id="approval-users">
 
-        <div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div>
 
+      <?php 
+           
+          foreach($reviews as $review){?>
+            <div class='feedback-card'>
+            <div class='user-info'>
+              <img src='../../../assets/defaultprofile.jpg' alt="<?= htmlspecialchars($review['name']) ?>" />
+              <div>
+                <h3><?= htmlspecialchars($review['name']) ?></h3>
+                <p><?= htmlspecialchars($review['email']) ?></p>
+              </div>
+            </div>
+            <p class='feedback-text'>
+              <?= htmlspecialchars($review['reviews'])  ?>
+            </p>
+          </div>
+          <?php } ?>
 
-        <div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div>
-
-        <div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div>
-
-        <div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div>
-
-        <div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div>
-
-        <div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div><div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div><div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div><div class="feedback-card">
-          <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
-            <div>
-              <h3>John Carter</h3>
-              <p>Student</p>
-            </div>
-          </div>
-          <div class="rating">⭐⭐⭐⭐⭐</div>
-          <p class="feedback-text">
-            The library system helped me access books quickly and improved my
-            study routine.
-          </p>
-        </div>
+      
+        
+        
 
     </section>
     

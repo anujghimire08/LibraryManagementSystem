@@ -135,32 +135,61 @@ main {
 }
 
 /*status css*/
-.status_div{
-    position: fixed;
-    z-index: 5;
-    inset: 0;
+.status_div {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
 
-    background-color: #ffffff4b;
-    backdrop-filter: blur(25px);
+  background-color: #ffffff4b;
+  backdrop-filter: blur(25px);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    flex-direction: column;
+  flex-direction: column;
 }
-.status_msg{     
-    border:2px solid black;
-    border-radius: 5px;
-    padding:5px;
+.status_msg {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
 
-    width:500px;
-    height:140px;
+  width: 500px;
+  height: 140px;
 
-    font-size: larger;
+  font-size: larger;
 }
-#status-logo{
-    height:100px; 
-    width:auto; 
-    margin-bottom:20px;
+#status-logo {
+  height: 100px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+#borrowing-container {
+  width: 80%;
+  background-color: #6b9aeb1a;
+  border: 1px solid #e0e0e0;
+  padding: 40px 20px;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 20px;
+}
+strong {
+  position: absolute;
+  top: 5px;
+}
+#borrowing-details {
+  display: flex;
+  justify-content: space-around;
+}
+.steps {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.steps i {
+  font-size: 26px;
+  color: #6b9aeb;
 }
