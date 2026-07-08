@@ -29,7 +29,7 @@
 
     $countStmt = mysqli_prepare($conn,
         "SELECT COUNT(*) AS total
-        FROM users");
+        FROM users WHERE isApproval = 1");
 
     mysqli_stmt_execute($countStmt);
 
