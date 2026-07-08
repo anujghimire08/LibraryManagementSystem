@@ -1,9 +1,50 @@
 <?php
     session_start();
+    include("../../includes/db.php");
     if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
         header("location: ../../Auth/logout.php");
         exit();
     }
+
+    $countStmt = mysqli_prepare($conn,
+        "SELECT COUNT(*) AS total
+        FROM BorrowRecords");
+
+    mysqli_stmt_execute($countStmt);
+
+    $countResult = mysqli_stmt_get_result($countStmt);
+    $totalBorrowRecords = mysqli_fetch_assoc($countResult)["total"];
+
+
+    $countResult = mysqli_query($conn, "SELECT COUNT(*) AS total FROM Books");
+    $countRow = mysqli_fetch_assoc($countResult);
+
+    $totalBooksRecords = $countRow["total"];
+
+    $countReview = mysqli_prepare($conn,"SELECT COUNT(*) AS total FROM reviews");
+    mysqli_stmt_execute($countReview);
+
+    $reviewResult = mysqli_stmt_get_result($countReview);
+    $totalReviewRecords = mysqli_fetch_assoc($reviewResult)["total"];
+
+    $countStmt = mysqli_prepare($conn,
+        "SELECT COUNT(*) AS total
+        FROM users");
+
+    mysqli_stmt_execute($countStmt);
+
+    $countResult = mysqli_stmt_get_result($countStmt);
+    $totalUserRecords = mysqli_fetch_assoc($countResult)["total"];
+
+    $countStmt = mysqli_prepare($conn,
+        "SELECT COUNT(*) AS total
+        FROM users WHERE isApproval = 0");
+
+    mysqli_stmt_execute($countStmt);
+
+    $countResult = mysqli_stmt_get_result($countStmt);
+    $totalRequestRecords = mysqli_fetch_assoc($countResult)["total"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +55,8 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../../css/user.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
     <style>
         .dash-contents{
             margin:30px 0;
@@ -94,39 +137,87 @@
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
-                        Books
+                      Total Books
                     </span>
                     <span class="dash-item-val">
-                        5
+                        <?= $totalBooksRecords ?>
                     </span>
                 </div>                
             </div>
+
             <div class="dash-items">
                 <div class="dash-items-logo">
                     <i class="fa-regular fa-bookmark"></i>
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
-                        Borrowed
+                      Total Borrowed
                     </span>
                     <span class="dash-item-val">
-                        5
+                        <?= $totalBorrowRecords ?>
                     </span>
                 </div>  
             </div>
+
             <div class="dash-items">
                 <div class="dash-items-logo">
                     <i class="fa-regular fa-star"></i>
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
-                        Review
+                       Total Review
                     </span>
                     <span class="dash-item-val">
-                        5
+                        <?= $totalReviewRecords ?>
                     </span>
                 </div>  
             </div>
+
+            <div class="dash-items">
+                <div class="dash-items-logo">
+                   <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="dash-items-txt">
+                    <span class="dash-item-head">
+                       Total Users
+                    </span>
+                    <span class="dash-item-val">
+                        <?= $totalUserRecords ?>
+                    </span>
+                </div>  
+            </div>
+
+            <div class="dash-items">
+                <div class="dash-items-logo">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="dash-items-txt">
+                    <span class="dash-item-head">
+                       Total Request
+                    </span>
+                    <span class="dash-item-val">
+                        <?= $totalRequestRecords ?>
+                    </span>
+                </div>  
+            </div>
+
+            <div class="dash-items">
+                <div class="dash-items-logo">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="dash-items-txt">
+                    <span class="dash-item-head">
+                     Available Books
+                    </span>
+                    <span class="dash-item-val">
+                        <?= $totalBooksRecords - $totalBorrowRecords  ?>
+                    </span>
+                </div>  
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <div id="calendar"></div>
         </div>
     </main>
     <script src="../../script/user.js"></script>
