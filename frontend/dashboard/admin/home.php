@@ -117,6 +117,14 @@
             font-weight:700;
             line-height:1;
         }
+        .head{
+            height:111px;
+        }
+        .pfp{
+            height:50px;
+            width:50px;
+            margin-right:20px;
+        }
     </style>
     
 </head>
@@ -128,7 +136,7 @@
 
     <main>
         <div class="head">
-            <h1>Librarian Dashboard</h1>
+            <h1>Librarian DASHBOARD</h1>
             <div class="pfp-details">
                 <div class="pfp"><?= strtoupper($_SESSION["user"][0]) ?></div>
             </div>

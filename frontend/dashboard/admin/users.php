@@ -39,7 +39,7 @@
 
     <main>
         <div class="head">
-            <h1>Librarian Dashboard</h1>
+            <h1>Librarian DASHBOARD</h1>
             <div class="pfp-details">
                 <div class="pfp"><?= strtoupper($_SESSION["user"][0]) ?></div>
             </div>

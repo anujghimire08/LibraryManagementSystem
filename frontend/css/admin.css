@@ -110,6 +110,8 @@ main {
 .pfp-details {
   display: flex;
   align-items: center;
+  width:100px;
+  height:100px;
   gap: 25px;
   padding: 10px 15px;
   cursor: pointer;
@@ -225,6 +227,7 @@ td {
 }
 
 .admin-approval-action button {
+  width:9rem; 
   padding: 10px 20px;
   color: white;
   border: none;
@@ -242,9 +245,13 @@ td {
 .admin-approval-action #reject {
   background-color: red;
 }
+.admin-approval-action form{
+  display: flex; 
+  gap:20px;
+}
 
 #borrowing-container {
-  width: 1050px;
+  width: 86vw;
   background-color: #6b9aeb3c;
   border: 1px solid #e0e0e0;
   padding: 40px 20px;
