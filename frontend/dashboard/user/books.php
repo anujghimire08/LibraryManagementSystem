@@ -125,7 +125,7 @@
             background:#fff;
             border:1px solid #e5e7eb;
             border-radius:12px;
-            padding:18px;
+            padding: 20px;
             display:flex;
             flex-direction:column;
             transition:.25s;
@@ -137,15 +137,14 @@
         }
 
         .book-card img{
-            width:130px;
-            height:190px;
-            object-fit:cover;
+            width:100%;
+            object-fit: contain;
             margin:0 auto 18px;
             border-radius:6px;
         }
 
         .book-card h3{
-            font-size:18px;
+            font-size:16px;
             margin-bottom:5px;
         }
 

@@ -110,8 +110,8 @@ main {
 .pfp-details {
   display: flex;
   align-items: center;
-  width:100px;
-  height:100px;
+  width: 100px;
+  height: 100px;
   gap: 25px;
   padding: 10px 15px;
   cursor: pointer;
@@ -222,16 +222,15 @@ td {
 
 .admin-approval-action {
   margin-top: 10px;
-  display: flex;
-  justify-content: space-around;
 }
 
 .admin-approval-action button {
-  width:9rem; 
+  width: 100%;
   padding: 10px 20px;
   color: white;
   border: none;
-  border-radius: 2px;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 .admin-approval-action button:active {
@@ -242,12 +241,9 @@ td {
   background-color: green;
 }
 
-.admin-approval-action #reject {
-  background-color: red;
-}
-.admin-approval-action form{
-  display: flex; 
-  gap:20px;
+.admin-approval-action form {
+  display: flex;
+  gap: 20px;
 }
 
 #borrowing-container {
@@ -305,7 +301,6 @@ strong {
   overflow: hidden;
   position: relative;
 }
-
 
 .dash-items-logo {
   width: 75px;

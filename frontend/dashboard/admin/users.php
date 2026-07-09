@@ -31,6 +31,10 @@
             background-color: #7c8fb1;
         }
 
+        table #name{
+            text-transform: capitalize;
+        }
+
     </style>
 </head>
 
@@ -44,28 +48,6 @@
                 <div class="pfp"><?= strtoupper($_SESSION["user"][0]) ?></div>
             </div>
         </div> 
-        <!-- <div class="dash-contents">
-            <div class="dash-items"> 
-                <span class="dash-contents-head">
-                    books
-                </span>
-            </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    Borrowed
-                </span>
-            </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    to review
-                </span>
-            </div>
-            <div class="dash-items">
-                <span class="dash-contents-head">
-                    returned
-                </span>
-            </div>
-        </div> -->
         <table rules="all">
             <thead>
                 <tr>
@@ -87,7 +69,7 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
                     echo "<td>{$row['id']}</td>";
-                    echo "<td>{$row['name']}</td>";
+                    echo "<td id='name'>{$row['name']}</td>";
                     echo "<td>{$row['email']}</td>";
                     echo "<td>{$row['role']}</td>";
                     echo "<td>{$row['created_at']}</td>";
