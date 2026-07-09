@@ -216,7 +216,8 @@
 
                 <div class="book-card">
 
-                    <img src="../../images/books/default.jpg" alt="Book">
+                <img src="<?= "../../../" . $book['imgpath'] ?>" alt="<?= htmlspecialchars($book["name"] . 's Cover') ?>">
+
 
                     <h3><?= htmlspecialchars($book["name"]) ?></h3>
 
