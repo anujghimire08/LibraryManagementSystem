@@ -37,8 +37,8 @@
             return;
         }
 
-         $useremail = $_POST['email'];
-         $bookname = $_POST['bookname'];
+        $useremail = $_POST['email'];
+        $bookname = $_POST['bookname'];
 
 
         $stmt = mysqli_prepare($conn, "SELECT id FROM users WHERE email = ? ");
@@ -73,6 +73,58 @@
     <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Inter', sans-serif;
+        }
+        .dash-items{
+            background:rgba(107, 154, 235, 0.41);
+            color:black;
+            border-radius:20px;
+            padding:25px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 8px 20px rgba(0,0,0,.25);
+            transition:all .25s ease;
+            overflow:hidden;
+            position:relative;
+        }
+        .dash-items-logo{
+            color:rgb(82, 143, 248);
+            width:75px;
+            height:75px;
+            border-radius:50%;
+            background:rgba(107, 154, 235, 0.52);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:34px;
+        }
+
+        .dash-items-txt{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+        }
+
+        .dash-item-head{
+            font-size:18px;
+            font-weight:600;
+            color:rgb(59, 128, 247);
+        }
+
+        .dash-item-val{
+            font-size:42px;
+            font-weight:700;
+            line-height:1;
+        }
+    </style>
 </head>
 
 
@@ -84,7 +136,7 @@
         <div class="head">
             <h1>ADMIN DASHBOARD</h1>
             <div class="pfp-details">
-                <div class="pfp">B</div>
+                <div class="pfp"><?= strtoupper($_SESSION["user"][0]) ?></div>
             </div>
         </div>
 

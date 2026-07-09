@@ -12,11 +12,14 @@
         $email = $_SESSION["email"];
         $review = filter_input(INPUT_POST,"review",FILTER_SANITIZE_SPECIAL_CHARS); 
 
-        $stmt = mysqli_prepare($conn,"
+        if(trim($review) != ""){    
+            $stmt = mysqli_prepare($conn,"
                     INSERT INTO reviews(name,email,reviews)
                     VALUES (?,?,?)");
-        mysqli_stmt_bind_param($stmt,"sss",$name,$email,$review);
-        mysqli_stmt_execute($stmt);
+            mysqli_stmt_bind_param($stmt,"sss",$name,$email,$review);
+            mysqli_stmt_execute($stmt);
+        }
+        
     }
 
 ?>
@@ -29,7 +32,13 @@
 
     <link rel="stylesheet" href="../../css/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        *{
+            font-family: 'Inter', sans-serif;
+        }
         .form-div{
             height:80vh;
             display: flex;

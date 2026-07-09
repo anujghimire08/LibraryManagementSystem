@@ -1,3 +1,6 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
 <aside>
 
         <div class="top">
@@ -15,7 +18,7 @@
 
                 <li class="nav-items">
                     <a href="borrowed.php">
-                        <i class="fa-regular fa-bookmark"></i>
+                        <i class="ri-bookmark-fill"></i>
                         <span>Borrowed</span>
                     </a>
                 </li>

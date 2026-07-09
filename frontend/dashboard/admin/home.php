@@ -52,12 +52,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="../../css/user.css">
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        *{
+            font-family: 'Inter', sans-serif;
+        }
         .dash-contents{
             margin:30px 0;
             display:grid;
@@ -66,8 +74,8 @@
         }
 
         .dash-items{
-            background:#7a7a7a;
-            color:white;
+            background:rgba(107, 154, 235, 0.41);
+            color:black;
             border-radius:20px;
             padding:25px;
             display:flex;
@@ -78,17 +86,12 @@
             overflow:hidden;
             position:relative;
         }
-
-        .dash-items:hover{
-            transform:translateY(-6px);
-            background:#666;
-            box-shadow:0 12px 30px rgba(0,0,0,.35);
-        }
         .dash-items-logo{
+            color:rgb(82, 143, 248);
             width:75px;
             height:75px;
-            border-radius:18px;
-            background:rgba(255,255,255,.12);
+            border-radius:50%;
+            background:rgba(107, 154, 235, 0.52);
             display:flex;
             justify-content:center;
             align-items:center;
@@ -106,7 +109,7 @@
         .dash-item-head{
             font-size:18px;
             font-weight:600;
-            color:rgba(255,255,255,.85);
+            color:rgb(59, 128, 247);
         }
 
         .dash-item-val{
@@ -147,7 +150,7 @@
 
             <div class="dash-items">
                 <div class="dash-items-logo">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <i class="ri-bookmark-fill"></i>
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
@@ -161,7 +164,7 @@
 
             <div class="dash-items">
                 <div class="dash-items-logo">
-                    <i class="fa-regular fa-star"></i>
+                    <i class="ri-feedback-fill"></i>
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
@@ -189,7 +192,7 @@
 
             <div class="dash-items">
                 <div class="dash-items-logo">
-                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
@@ -203,7 +206,7 @@
 
             <div class="dash-items">
                 <div class="dash-items-logo">
-                    <i class="fa-regular fa-star"></i>
+                    <i class="ri-book-open-fill"></i>
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
