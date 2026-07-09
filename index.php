@@ -9,11 +9,17 @@
     />
     <link
       rel="shortcut icon"
-      href="https://cdn-icons-png.flaticon.com/512/8832/8832880.png"
+      href="./assets/logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="../LibraryManagementSystem/frontend/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../LibraryManagementSystem/frontend/css/index.css"
+    />
     <title>Library Management System</title>
   </head>
   <body>
@@ -97,7 +103,7 @@
           </div>
         </div>
         <div id="lms-milestone-right">
-          <video autoplay muted loop playsinline>
+          <video autoplay muted loop>
             <source src="./assets/milestonevideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -106,7 +112,9 @@
             Beyond.
           </h2>
           <button id="lms-milestone-right-intouch">
-            <p>Explore System</p>
+            <p onclick="location.href = './frontend/Auth/register.php'">
+              Explore System
+            </p>
             <i class="ri-arrow-right-long-line"></i>
           </button>
         </div>
@@ -157,7 +165,7 @@
 
         <div class="feedback-card">
           <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=1" alt="user" />
+            <img src="https://i.pravatar.cc/80?img=8" alt="user" />
             <div>
               <h3>John Carter</h3>
               <p>Student</p>
@@ -172,7 +180,7 @@
 
         <div class="feedback-card">
           <div class="user-info">
-            <img src="https://i.pravatar.cc/80?img=8" alt="user" />
+            <img src="https://i.pravatar.cc/80?img=4" alt="user" />
             <div>
               <h3>Michael Brown</h3>
               <p>Student</p>
@@ -190,10 +198,10 @@
             <img src="https://i.pravatar.cc/80?img=10" alt="user" />
             <div>
               <h3>Sophia Miller</h3>
-              <p>Librarian</p>
+              <p>Teacher</p>
             </div>
           </div>
-          <div class="rating">⭐⭐⭐⭐<span class="half-star">⭐</span></div>
+          <div class="rating">⭐⭐⭐⭐</div>
           <p class="feedback-text">
             This platform makes book management faster and keeps everything
             organized.
@@ -235,44 +243,54 @@
     <section id="comparision">
       <div id="comparision-section-header">
         <button>
-          COMPARISION
+          COMPARISON
           <div id="rt"></div>
           <div id="lt"></div>
           <div id="rb"></div>
           <div id="lb"></div>
         </button>
+
         <h2>
-          What Sets Our System <br />
-          Apart From Other System.
+          What Makes Our Library <br />
+          Management System Better?
         </h2>
       </div>
+
       <section id="comparison-section">
         <div class="comparison-container">
           <div class="comparison-card comparison-card--primary">
             <div class="comparison-header">
-              <img src="./assets/logo.png" alt="Company Logo" class="comparison-logo" />
+              <img
+                src="./assets/logo.png"
+                alt="Library Logo"
+                class="comparison-logo"
+              />
             </div>
 
             <ul class="comparison-list">
               <li class="comparison-item positive">
                 <i class="ri-checkbox-circle-line"></i>
-                Highly Affordable, No Quality Cuts
+                Centralized Book Record Management
               </li>
+
               <li class="comparison-item positive">
                 <i class="ri-checkbox-circle-line"></i>
-                Project-Based, Skill-First Learning
+                Quick Search by Title, Author & Category
               </li>
+
               <li class="comparison-item positive">
                 <i class="ri-checkbox-circle-line"></i>
-                Continuously Updated With Industry Trends
+                Efficient Borrow & Return Record Tracking
               </li>
+
               <li class="comparison-item positive">
                 <i class="ri-checkbox-circle-line"></i>
-                Internal Hackathons, Challenges & Face-Offs
+                Secure User & Admin Authentication
               </li>
+
               <li class="comparison-item positive">
                 <i class="ri-checkbox-circle-line"></i>
-                Industry-Relevant, Job-Oriented Curriculum
+                Faster Data Retrieval & Report Generation
               </li>
             </ul>
           </div>
@@ -280,35 +298,173 @@
           <div class="comparison-card comparison-card--secondary">
             <div class="comparison-header">
               <h3 class="comparison-title">
-                <i class="ri-stack-fill"></i> Others
+                <i class="ri-stack-fill"></i> Traditional System
               </h3>
             </div>
+            <br /><br /><br />
 
             <ul class="comparison-list">
               <li class="comparison-item negative">
                 <i class="ri-close-circle-line"></i>
-                High Fees With Compromised Quality
+                Manual Paper-Based Record Keeping
               </li>
+
               <li class="comparison-item negative">
                 <i class="ri-close-circle-line"></i>
-                Theory-Centric Learning
+                Slow Book Search Process
               </li>
+
               <li class="comparison-item negative">
                 <i class="ri-close-circle-line"></i>
-                Outdated, Static Curriculum
+                Manual Borrow & Return Tracking
               </li>
+
               <li class="comparison-item negative">
                 <i class="ri-close-circle-line"></i>
-                No Competitive Learning Environment
+                Higher Risk of Data Errors & Lost Records
               </li>
+
               <li class="comparison-item negative">
                 <i class="ri-close-circle-line"></i>
-                Limited Practical Exposure
+                Time-Consuming Report Preparation
               </li>
             </ul>
           </div>
         </div>
       </section>
+    </section>
+
+    <section id="project-team">
+      <div id="team-section-header">
+        <button>
+          PROJECT TEAM
+          <div id="rt"></div>
+          <div id="lt"></div>
+          <div id="rb"></div>
+          <div id="lb"></div>
+        </button>
+
+        <h2>
+          Meet the Dedicated Team <br />
+          Behind This Project.
+        </h2>
+      </div>
+
+      <div id="card">
+        <div class="profile">
+          <img
+            class="logo"
+            src="https://github.com/Bibidh-Raj-Shrestha.png"
+            alt="bibidh's profile"
+          />
+          <h1>Bibidh Raj Shrestha</h1>
+          <p class="occupation">Frontend / Backend</p>
+          <div class="icons">
+            <a
+              href="https://www.facebook.com/bibidhrajshrestha17"
+              target="_blank"
+              ><i class="ri-facebook-fill"></i
+            ></a>
+            <a href="https://github.com/Bibidh-Raj-Shrestha" target="_blank"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/bibidh-raj-shrestha-0a559a328/"
+              target="_blank"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/bibidhrajshrestha/"
+              target="_blank"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img
+            class="logo"
+            src="https://github.com/pragyanrajbhandari.png"
+            alt="pragyan's profile"
+          />
+          <h1>Pragyan Rajbhandari</h1>
+          <p class="occupation">Frontend / Backend</p>
+          <div class="icons">
+            <a
+              href="https://www.facebook.com/pragyan.rajbhandari.3/"
+              target="_blank"
+              ><i class="ri-facebook-fill"></i
+            ></a>
+            <a href="https://github.com/pragyanrajbhandari" target="_blank"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/pragyanrajbhandari/"
+              target="_blank"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/rajbhandaripragyan/"
+              target="_blank"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img
+            class="logo"
+            src="https://github.com/nischalshrestha0011.png"
+            alt="nischal's profile"
+          />
+          <h1>Nischal Shrestha</h1>
+          <p class="occupation">Frontend / Backend</p>
+          <div class="icons">
+            <a
+              href="https://www.facebook.com/nischal.shrestha.487598?rdid=OovdQ6Pbr7IanVP9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Rhu6XEFhV%2F#"
+              target="_blank"
+              ><i class="ri-facebook-fill"></i
+            ></a>
+            <a href="https://github.com/nischalshrestha0011" target="_blank"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/nischal-shrestha-376280421/"
+              target="_blank"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/onlyk_aji?igsh=ejFjanF0bGl1c2pk"
+              target="_blank"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img
+            class="logo"
+            src="https://github.com/anujghimire08.png"
+            alt="Anuj's profile"
+          />
+          <h1>Anuj Ghimire</h1>
+          <p class="occupation">Frontend / Backend</p>
+          <div class="icons">
+            <a href="https://www.facebook.com/anujghimire08" target="_blank"
+              ><i class="ri-facebook-fill"></i
+            ></a>
+            <a href="https://github.com/anujghimire08" target="_blank"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/anujghimire08/" target="_blank"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+            <a href="https://www.instagram.com/anujghimire08" target="_blank"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer id="site-footer">
@@ -327,7 +483,7 @@
 
           <p>Bibidh Raj Shrestha</p>
           <p>Anuj Ghimire</p>
-          <p>Pragyan Raj Bhandari</p>
+          <p>Pragyan RajBhandari</p>
           <p>Nischal Shrestha</p>
 
           <p class="footer-email">library12@gmail.com</p>
@@ -384,8 +540,8 @@
         }, 1000);
       }
       blink();
-      function navigate(){
-        window.location.href="./frontend/Auth/login.php";
+      function navigate() {
+        window.location.href = "./frontend/Auth/login.php";
       }
     </script>
   </body>
