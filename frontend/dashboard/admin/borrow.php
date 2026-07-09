@@ -1,39 +1,39 @@
 <?php
-    session_start();
-    require_once("../../includes/db.php");
-    if(!isset($_SESSION['user']) || !isset($_SESSION['role'])){
-        header("location: ../../Auth/logout.php");
-        exit();
-    }
-    
-    // accessing user name for select elements
-    $stmt = mysqli_prepare($conn, "SELECT email FROM users WHERE role='user'");
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
+session_start();
+require_once("../../includes/db.php");
+if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
+    header("location: ../../Auth/logout.php");
+    exit();
+}
 
-    $users = mysqli_fetch_all($result,MYSQLI_ASSOC);
+// accessing user name for select elements
+$stmt = mysqli_prepare($conn, "SELECT email FROM users WHERE role='user'");
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 
-
-    // accessing book name for select elements
-    $stmt = mysqli_prepare($conn, "SELECT name FROM books");
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
-
-    $books = mysqli_fetch_all($result,MYSQLI_ASSOC);
-
-    // total books borrowed count 
-    $stmt = mysqli_prepare($conn, "SELECT count(*) AS total FROM borrowrecords");
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
-
-    $totalborrowedbooks = mysqli_fetch_assoc($result)['total'];
+$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-    // user ko books borrowed's ko data storing back to database 
-    if($_SERVER['REQUEST_METHOD']==="POST"){
-        if(isset($_POST['borrowed'])){
+// accessing book name for select elements
+$stmt = mysqli_prepare($conn, "SELECT name FROM books");
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 
-        if($_POST['email']=== "" || $_POST['bookname']=== ""){
+$books = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// total books borrowed count 
+$stmt = mysqli_prepare($conn, "SELECT count(*) AS total FROM borrowrecords");
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+
+$totalborrowedbooks = mysqli_fetch_assoc($result)['total'];
+
+
+// user ko books borrowed's ko data storing back to database 
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    if (isset($_POST['borrowed'])) {
+
+        if ($_POST['email'] === "" || $_POST['bookname'] === "") {
             return;
         }
 
@@ -42,29 +42,30 @@
 
 
         $stmt = mysqli_prepare($conn, "SELECT id FROM users WHERE email = ? ");
-        mysqli_stmt_bind_param($stmt,'s',$useremail );
+        mysqli_stmt_bind_param($stmt, 's', $useremail);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         $userid = mysqli_fetch_assoc($result)['id'];
 
 
         $stmt2 = mysqli_prepare($conn, "SELECT id FROM books WHERE name = ? ");
-        mysqli_stmt_bind_param($stmt2,'s',$bookname );
+        mysqli_stmt_bind_param($stmt2, 's', $bookname);
         mysqli_stmt_execute($stmt2);
         $result = mysqli_stmt_get_result($stmt2);
         $bookid = mysqli_fetch_assoc($result)['id'];
 
 
-         $stmtborrow = mysqli_prepare($conn, "INSERT INTO borrowrecords (user_id, book_id)  VALUES (?,?)");
-         mysqli_stmt_bind_param($stmtborrow, "ii", $userid, $bookid);
-         mysqli_stmt_execute($stmtborrow);
-        }
+        $stmtborrow = mysqli_prepare($conn, "INSERT INTO borrowrecords (user_id, book_id)  VALUES (?,?)");
+        mysqli_stmt_bind_param($stmtborrow, "ii", $userid, $bookid);
+        mysqli_stmt_execute($stmtborrow);
     }
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,57 +73,59 @@
 
     <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        *{
+        * {
             font-family: 'Inter', sans-serif;
         }
-        .dash-items{
-            background:rgba(107, 154, 235, 0.41);
-            color:black;
-            border-radius:20px;
-            padding:25px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            box-shadow:0 8px 20px rgba(0,0,0,.25);
-            transition:all .25s ease;
-            overflow:hidden;
-            position:relative;
-        }
-        .dash-items-logo{
-            color:rgb(82, 143, 248);
-            width:75px;
-            height:75px;
-            border-radius:50%;
-            background:rgba(107, 154, 235, 0.52);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-size:34px;
+
+        .dash-items {
+            background: rgba(107, 154, 235, 0.41);
+            color: black;
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+            transition: all .25s ease;
+            overflow: hidden;
+            position: relative;
         }
 
-        .dash-items-txt{
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            gap:8px;
+        .dash-items-logo {
+            color: rgb(82, 143, 248);
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: rgba(107, 154, 235, 0.52);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 34px;
         }
 
-        .dash-item-head{
-            font-size:18px;
-            font-weight:600;
-            color:rgb(59, 128, 247);
+        .dash-items-txt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .dash-item-val{
-            font-size:42px;
-            font-weight:700;
-            line-height:1;
+        .dash-item-head {
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(59, 128, 247);
+        }
+
+        .dash-item-val {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1;
         }
     </style>
 </head>
@@ -140,7 +143,7 @@
             </div>
         </div>
 
-                <div class="borrow-head">
+        <div class="borrow-head">
             <div class="borrow-head-title">
                 <h2>Borrowed Books</h2>
                 <p>Manage and view all the books you have currently borrowed</p>
@@ -164,34 +167,65 @@
         <div id="borrow-section">
             <form method="POST" id="borrow-form">
 
-        <input list='emails' name='email' id='email' placeholder="user@gmail.com">
-        <datalist id='emails'>
+                <input list='emails' name='email' id='email' placeholder="user@gmail.com">
+                <datalist id='emails'>
 
-            <?php 
-                    foreach($users as $user){
-                    echo "<option value='{$user['email']}'/>";
+                    <?php
+                    foreach ($users as $user) {
+                        echo "<option value='{$user['email']}'/>";
                     }
-            ?> 
+                    ?>
 
-        </datalist>
+                </datalist>
 
-            <select id="books" name='bookname'>
-                <option value="" selected disabled>Select Book</option>
+                <select id="books" name='bookname'>
+                    <option value="" selected disabled>Select Book</option>
 
-                <?php 
-                        foreach($books as $book){
+                    <?php
+                    foreach ($books as $book) {
                         echo "<option value='{$book['name']}'>{$book['name']}</option>";
-                        }
-                ?>
-          </select>
+                    }
+                    ?>
+                </select>
 
-          <button type='submit' name='borrowed'>Marked as Borrowed</button>
+                <button type='submit' name='borrowed'>Marked as Borrowed</button>
 
-        </form>
+            </form>
         </div>
-        
-        <?php include_once("../../includes/borrow_guidelines.php")?>
+
+        <!-- return books -->
+        <div id="borrow-section">
+            <form method="POST" id="borrow-form" action="return.php">
+
+                <input list='emails' name='email' id='email' placeholder="user@gmail.com">
+                <datalist id='emails'>
+
+                    <?php
+                    foreach ($users as $user) {
+                        echo "<option value='{$user['email']}'/>";
+                    }
+                    ?>
+
+                </datalist>
+
+                <select id="books" name='bookname'>
+                    <option value="" selected disabled>Select Book</option>
+
+                    <?php
+                    foreach ($books as $book) {
+                        echo "<option value='{$book['name']}'>{$book['name']}</option>";
+                    }
+                    ?>
+                </select>
+
+                <button type='submit' name='borrowed'>Marked as Returned</button>
+
+            </form>
+        </div>
+
+        <?php include_once("../../includes/borrow_guidelines.php") ?>
     </main>
     <script src="../../script/admin.js"></script>
 </body>
+
 </html>

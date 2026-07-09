@@ -1,8 +1,8 @@
 <?php
     $db_server = "localhost";
     $db_user ="root";
-    $db_pass = "sql123";
-    $db_name = "lms";
+    $db_pass = "";
+    $db_name = "lmc";
     
     try{
         $conn = mysqli_connect($db_server,$db_user,$db_pass,$db_name);

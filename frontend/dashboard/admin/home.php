@@ -148,7 +148,7 @@
                 </div>
                 <div class="dash-items-txt">
                     <span class="dash-item-head">
-                      Total Books
+                        Total Books
                     </span>
                     <span class="dash-item-val">
                         <?= $totalBooksRecords ?>
