@@ -12,80 +12,247 @@
 
 ---
 
-## 👥 About the Project
+## 📖 About the Project
 
-This repository represents our **team-based Library Management System project**, developed as part of our team coursework in web development.
+The **Library Management System (LMS)** is a web-based application developed to simplify and automate library operations. The system provides separate interfaces for administrators and users, enabling efficient management of books, borrowing activities, user accounts, and reviews.
 
-The system is designed to digitize and simplify library operations such as managing books, members, and borrow/return processes.
+The project was developed as a collaborative team project using **HTML, CSS, JavaScript, PHP, and MySQL**.
 
 ---
 
 ## 👨‍💻 Team Members
 
-<p align="center"> 
+<p align="center">
 
-<a href="https://github.com/Bibidh-Raj-Shrestha"> <img src="https://github.com/Bibidh-Raj-Shrestha.png" width="100"/><br/> <b>Bibidh Raj Shrestha</b><br/> Frontend / Backend / UI/UX </a>
-
-<br/><br/>
-
-<a href="https://github.com/anujghimire08"> <img src="https://github.com/anujghimire08.png" width="100"/><br/> <b>Anuj Ghimire (Team Leader)</b><br/> Frontend / Backend / UI/UX </a>
-
-<br/><br/>
-
-<a href="https://github.com/pragyanrajbhandari"> <img src="https://github.com/pragyanrajbhandari.png" width="100"/><br/> <b>Pragyan Rajbhandari</b><br/> Frontend / Backend / UI/UX </a>
+<a href="https://github.com/anujghimire08">
+<img src="https://github.com/anujghimire08.png" width="100"/><br/>
+<b>Anuj Ghimire (Team Leader)</b><br/>
+Frontend • Backend • UI/UX
+</a>
 
 <br/><br/>
 
-<a href="https://github.com/nischalshrestha0011"> <img src="https://github.com/nischalshrestha0011.png" width="100"/><br/> <b>Nischal Shrestha</b><br/> Frontend / Backend / UI/UX </a> </p>
+<a href="https://github.com/Bibidh-Raj-Shrestha">
+<img src="https://github.com/Bibidh-Raj-Shrestha.png" width="100"/><br/>
+<b>Bibidh Raj Shrestha</b><br/>
+Frontend • Backend • UI/UX
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/pragyanrajbhandari">
+<img src="https://github.com/pragyanrajbhandari.png" width="100"/><br/>
+<b>Pragyan Rajbhandari</b><br/>
+Frontend • Backend • UI/UX
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/nischalshrestha0011">
+<img src="https://github.com/nischalshrestha0011.png" width="100"/><br/>
+<b>Nischal Shrestha</b><br/>
+Frontend • Backend • UI/UX
+</a>
+
+</p>
 
 ---
 
-## 🎯 Project Purpose
+## 🎯 Objectives
 
-- Develop a **fully functional library management system**
-- Improve collaboration and teamwork skills
-- Apply theoretical knowledge into a real-world system
-- Build a strong foundation in full-stack web development
-
----
-
-## 🎓 Academic Context
-
-- **Project Name:** Library Management System
-- **Type:** Team Project
-- **Subject:** Web Development / Database Systems
-- **Focus Areas:** CRUD operations, authentication, database design, UI/UX, system logic
+- Digitize library management processes.
+- Simplify book borrowing and returning.
+- Maintain centralized records of books and users.
+- Provide secure authentication for administrators and users.
+- Improve efficiency by reducing manual record keeping.
 
 ---
 
-## ✨ Key Features
+## 🎓 Academic Information
 
-- 🔐 User Authentication (Login/Register)
-- 📚 Book Management (Add / Edit / Delete / View)
-- 👤 Member Management System
-- 🔄 Borrow & Return System
-- 🔍 Search & Filter Functionality
-- 📊 Basic Reports & Tracking
-- 📱 Responsive UI Design
+| Item                 | Description                       |
+| -------------------- | --------------------------------- |
+| **Project Name**     | Library Management System         |
+| **Project Type**     | Team Project                      |
+| **Technology Stack** | HTML, CSS, JavaScript, PHP, MySQL |
+| **Database**         | MySQL                             |
+| **Server**           | Apache (XAMPP)                    |
 
 ---
 
-## 📂 Project Structure
+# ✨ Features
+
+## 👤 Authentication
+
+- User Registration
+- User Login
+- Logout
+- Session Management
+- Password Hashing
+- Account Approval by Administrator
+
+---
+
+## 📚 Book Management
+
+Administrator can:
+
+- Add Books
+- Update Book Information
+- Delete Books
+- View All Books
+- Search Books
+
+User can:
+
+- Browse Available Books
+- Search Books
+- View Book Details
+
+---
+
+## 🔄 Borrow Management
+
+- Borrow Book Request
+- Borrow Request Approval
+- Borrow Status Tracking
+- Return Book Management
+- Borrow History
+
+---
+
+## 👥 User Management
+
+Administrator can:
+
+- View Registered Users
+- Approve User Accounts
+- Manage User Information
+
+---
+
+## ⭐ Review System
+
+- Submit Book Reviews
+- View Reviews
+- Manage Reviews
+
+---
+
+## 📊 Dashboard
+
+### Administrator Dashboard
+
+- Total Books
+- Total Users
+- Borrow Statistics
+- Pending Requests
+- Recent Activities
+
+### User Dashboard
+
+- Available Books
+- Borrowed Books
+- Borrow Status
+- Reviews
+
+---
+
+## 🔒 Security Features
+
+- Role-Based Access Control
+- Session Authentication
+- Password Hashing
+- Prepared SQL Statements
+- Input Validation
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology     | Purpose                   |
+| -------------- | ------------------------- |
+| HTML5          | Structure                 |
+| CSS3           | Styling                   |
+| JavaScript     | Client-side Interactivity |
+| PHP            | Backend Development       |
+| MySQL          | Database                  |
+| Apache (XAMPP) | Local Server              |
+
+---
+
+# Preview
+
+| Landing Page                   |
+| ------------------------------ |
+| ![](./assets/home-hero.webp)   |
+| ![](./assets/home-team.webp)   |
+| ![](./assets/home-review.webp) |
+
+| Administrator Dashboard       |
+| ----------------------------- |
+| ![](./assets/admin-home.webp) |
+| ![](./assets/admin-book.webp) |
+
+| User Dashboard                 |
+| ------------------------------ |
+| ![](./assets/user-home.webp)   |
+| ![](./assets/user-borrow.webp) |
+
+---
+
+# 📂 Project Structure
 
 ```text
 📦 LibraryManagementSystem
  ┣ 📂assets
+ ┃ ┣ 📂books
+ ┃ ┃ ┣ 📜1984.jpg
+ ┃ ┃ ┣ 📜algorithm.jpg
+ ┃ ┃ ┣ 📜atomic.jpg
+ ┃ ┃ ┣ 📜beyondpossible.jpg
+ ┃ ┃ ┣ 📜binod.jpg
+ ┃ ┃ ┣ 📜bravenewworld.jpg
+ ┃ ┃ ┣ 📜chinaharayeko.jpg
+ ┃ ┃ ┣ 📜cleancode.jpg
+ ┃ ┃ ┣ 📜deepwork.jpg
+ ┃ ┃ ┣ 📜girlsontrain.jpg
+ ┃ ┃ ┣ 📜harrypotter.jpg
+ ┃ ┃ ┣ 📜ikigai.jpg
+ ┃ ┃ ┣ 📜jeevankada.png
+ ┃ ┃ ┣ 📜mahabir.jpeg
+ ┃ ┃ ┣ 📜makeyourbed.jpg
+ ┃ ┃ ┣ 📜nepathya.jpg
+ ┃ ┃ ┣ 📜neverfinished.jpg
+ ┃ ┃ ┣ 📜PrideandPrejudice.jpg
+ ┃ ┃ ┣ 📜psychologymoey.jpg
+ ┃ ┃ ┣ 📜richdad.jpg
+ ┃ ┃ ┣ 📜rookmangud.jpg
+ ┃ ┃ ┣ 📜shutterisland.jpg
+ ┃ ┃ ┣ 📜TheDaVinciCode.jpg
+ ┃ ┃ ┣ 📜thinkrich.jpg
+ ┃ ┃ ┗ 📜thniklikemonk.jpg
+ ┃ ┣ 📜admin-book.webp
+ ┃ ┣ 📜admin-home.webp
  ┃ ┣ 📜defaultprofile.jpg
  ┃ ┣ 📜growth.png
  ┃ ┣ 📜headerbg.jpg
+ ┃ ┣ 📜home-hero.webp
+ ┃ ┣ 📜home-review.webp
+ ┃ ┣ 📜home-team.webp
  ┃ ┣ 📜left.png
  ┃ ┣ 📜loginbg.jpeg
  ┃ ┣ 📜logo.png
+ ┃ ┣ 📜lsmhome.gif
+ ┃ ┣ 📜lsmpreview.mp4
  ┃ ┣ 📜manage.png
  ┃ ┣ 📜milestonevideo.mp4
  ┃ ┣ 📜registerbg.jpg
- ┃ ┗ 📜right.png
+ ┃ ┣ 📜right.png
+ ┃ ┣ 📜user-borrow.webp
+ ┃ ┗ 📜user-home.webp
  ┣ 📂Documentation
+ ┃ ┣ 📜Library Management System.docx
  ┃ ┗ 📜x.excalidraw
  ┣ 📂frontend
  ┃ ┣ 📂Auth
@@ -104,6 +271,7 @@ The system is designed to digitize and simplify library operations such as manag
  ┃ ┃ ┃ ┣ 📜borrow.php
  ┃ ┃ ┃ ┣ 📜home.php
  ┃ ┃ ┃ ┣ 📜request.php
+ ┃ ┃ ┃ ┣ 📜return.php
  ┃ ┃ ┃ ┣ 📜reviews.php
  ┃ ┃ ┃ ┗ 📜users.php
  ┃ ┃ ┗ 📂user
@@ -116,20 +284,83 @@ The system is designed to digitize and simplify library operations such as manag
  ┃ ┃ ┣ 📂navbars
  ┃ ┃ ┃ ┣ 📜admin_navbar.php
  ┃ ┃ ┃ ┗ 📜user_navbar.php
- ┃ ┃ ┗ 📜db.php
+ ┃ ┃ ┣ 📜borrow_guidelines.php
+ ┃ ┃ ┣ 📜db.php
+ ┃ ┃ ┗ 📜event.php
  ┃ ┗ 📂script
  ┃ ┃ ┣ 📜admin.js
  ┃ ┃ ┗ 📜user.js
- ┣ 📜index.html
+ ┣ 📜index.php
  ┗ 📜Readme.md
 ```
 
-### 📌 Note
+---
 
-This is a collaborative team project where all members contributed to planning, development, and testing of the Library Management System.
+# 🚀 Getting Started
+
+## Requirements
+
+- PHP 8+
+- MySQL
+- Apache (XAMPP)
+
+## Installation
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/anujghimire08/LibraryManagementSystem
+```
+
+2. Move the project into the **htdocs** directory.
+
+3. Start **Apache** and **MySQL** from XAMPP.
+
+4. Import the provided **lms.sql** file into phpMyAdmin.
+
+5. Open your browser and visit:
+
+```
+http://localhost/LibraryManagementSystem
+```
 
 ---
 
-<p align="center"> <b>⭐ If you like our project, don’t forget to star the repository!</b><br> <sub>Built with ❤️ by our development team</sub>
+# 📸 System Modules
 
- <p align="center"> <a href="#top">🔺Scroll to Top</a> </p>
+- Landing Page
+- Login
+- Registration
+- Admin Dashboard
+- User Dashboard
+- Book Management
+- User Management
+- Borrow Request
+- Borrow Records
+- Return Management
+- Reviews
+- Account Approval
+
+---
+
+# 🤝 Team Contribution
+
+This project was completed collaboratively. Every team member contributed to the planning, design, development, testing, and documentation of the Library Management System.
+
+---
+
+# 📄 License
+
+This project was developed for academic purposes.
+
+---
+
+<p align="center">
+⭐ If you found this project useful, consider giving it a star!
+<br><br>
+Built with ❤️ by our team.
+</p>
+
+<p align="center">
+<a href="#top">⬆ Back to Top</a>
+</p>
