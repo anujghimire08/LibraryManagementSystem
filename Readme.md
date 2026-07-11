@@ -24,6 +24,8 @@ The project was developed as a collaborative team project using **HTML, CSS, Jav
 
 <p align="center">
 
+<br/><br/>
+
 <a href="https://github.com/anujghimire08">
 <img src="https://github.com/anujghimire08.png" width="100"/><br/>
 <b>Anuj Ghimire (Team Leader)</b><br/>
